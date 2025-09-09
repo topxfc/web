@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* div本身没有内外边距 但是ul有 */
+        }
+        li {
+            list-style: none;
+        }
+
+        /* 三种传统网页布局方式：普通流（标准流/文档流）浮动 定位 */
+        .left {
+            width: 50px;
+            height: 50px;
+            background-color: lightblue;
+            float: left;
+        }
+
+        .right {
+            /* width: 50px; */
+            height: 50px;
+            background-color: lightblue;
+            float: right;
+
+        }
+
+        .box1 {
+            width: 1070px;
+            height: 460px;
+            background-color: lightblue;
+
+        }
+        .box1 li {
+            float: left;
+            width: 260px;
+            height: 460px;
+            background-color: lightcoral;
+            margin-right: 10px;
+        }
+        /* 注意权重问题 如果直接写.last 权重会比较低 导致样式不生效 */
+        .box1 .last {
+            margin-right: 0;
+        }
+
+        .left1 {
+            float: left;
+            width: 230px;
+            height: 460px;
+            background-color: lightcoral;
+        }
+
+        .right2 {
+            float: right;
+            width: 970px;
+            height: 460px;
+            background-color: lightcyan;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="left">青龙</div> -->
+    <!-- <div class="right">白虎</div> -->
+    <!-- span是行内元素 当时有行内块的特性 可以设置高和宽-->
+    <!-- <span class="left">1</span>
+    <span class="left">2</span> -->
+    <!-- 行内块元素 不设置宽度 宽度由内容决定 -->
+    <!-- <span class="right">2222222222222222222</span> -->
+    <!-- <div class="box1">
+        <div class="left1"></div>
+        <div class="right2"></div>
+        
+    </div> -->
+    <ul class = 'box1'>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li class="last"></li>
+    </ul>
+</body>
+
+</html>

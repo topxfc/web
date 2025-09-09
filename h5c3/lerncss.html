@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        /* 选择器 {样式} 下面的代码很规范 */
+        /* 12像素 */
+        /* p {
+            color: red;
+            font-size: 12px;
+        } */
+
+        /* div {
+            color: black;
+        } */
+        /* 类选择器 样式.定义 结构类(class)调用 一个或多个 开发最常用*/
+        .hongse {
+            color: red;
+        }
+
+        .red {
+            /* color: red; */
+
+            background-color: red;
+        }
+
+        .green {
+            /* color: red; */
+            /* width: 100px;
+            height: 100px; */
+            background-color: green;
+        }
+
+        .font {
+            font-size: 15pt;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* id选择器 样式#定义 结构id调用 只能调用一次 别人切勿使用*/
+        #first {
+            color: blue;
+            font-size: 35pt;
+            font-weight: bold;
+        }
+
+        /* 通配符选择器 把html body div span li都改为红色*/
+        /* * {
+            color: gray
+        } */
+
+        /* 字体属性 如果第一个字体没有安装则使用第二个字体 以此类推 谷歌浏览器字体大小默认16px 标题要单独设置*/
+        h2 {
+            font-family: 'Microsoft YaHei', sans-serif;
+            font-size: 16px;
+        }
+
+        /* body {
+            font-size: 30px;
+
+        } */
+        .bold {
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        /* 复合属性 style weight size(必须在)/line-height family(必须在) 顺序不能乱*/
+        /* p {
+            font: italic 700 16px/30px 'Microsoft YaHei', sans-serif;
+        } */
+
+        /* 文本属性 */
+        .text-attribute {
+            color: deeppink;
+            text-align: left;
+            text-decoration: none;
+            text-indent: 2em;
+            line-height: 16px;
+        }
+
+        /* style：内部样式表（嵌入式）理论上style可以放在html文件的任何一个地方 控制整个html页面*/
+        /* 简单样式表 只控制当前标签 */
+        /* 外部样式表 */
+
+        /* Emmt快速生成CSS 每个单词的首字母和参数 */
+        .emmt {
+            width: 100px;
+            text-indent: 2em;
+            width: 100px;
+        }
+
+        /* 后代选择器 */
+        ul li {
+            color: pink;
+        }
+
+        ol li a {
+            color: red;
+        }
+
+        .nav li a {
+            color: rgb(0, 255, 98);
+        }
+
+        /* 子选择器 */
+        .subselecter>a {
+            color: red;
+        }
+
+        /* 并集选择器 用逗号隔开*/
+
+        .subselecter p a,
+        h4 {
+            color: paleturquoise;
+        }
+
+        /* 链接伪类选择器 要按照顺序写 链接要给单独样式*/
+        a:link {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:visited {
+            color: blue;
+        }
+
+        a:active {
+            color: rgb(0, 255, 140);
+        }
+
+        a:hover {
+            color: darkred;
+            text-decoration: line-through;
+        }
+
+        /* focus伪类选择器 */
+        input:focus {
+            background-color: blue;
+        }
+
+        .displayConverForA {
+            width: 100px;
+            height: 50px;
+            background-color: pink;
+            display: block;
+        }
+
+        .displayConverForDiv {
+            width: 300px;
+            height: 100px;
+            background-color: purple;
+            display: inline;
+        }
+
+        .displayConverForSpan {
+            width: 200px;
+            height: 30px;
+            background-color: green;
+            display: inline-block;
+        }
+
+        .background {
+            background-color: lightgray;
+        }
+
+        .backgroundImage {
+            width: 600px;
+            height: 300px;
+            background-image: url(../img/nwafu.svg);
+            /* 是否平铺 怎么平铺*/
+            background-repeat: no-repeat;
+            background-color: green;
+            /* 两个参数 分别为xy 没有顺序 默认居中 */
+            /* background-position: center; */
+            /* 精确单位 先x后y 有顺序 */
+            /* background-position: 20px 110px; */
+            /* 混合单位 有顺序*/
+            background-position: 20px center;
+            /* 背景滚动 */
+            /* background-attachment: fixed; */
+
+        }
+
+        .xinong {
+            width: 160px;
+            height: 40px;
+            /* background-color: lightblue; */
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 40px;
+            background-image: url(../img/nwafulogo.ico);
+            background-repeat: no-repeat;
+            background-position: left;
+            text-indent: 2.5em;
+
+        }
+
+        .pubg {
+            /* background-image: url(../img/pubg.webp);
+            background-repeat: no-repeat;
+            background-position: center top; */
+            /* 背景滚动 */
+            /* background-attachment: fixed; */
+
+            /* 符合属性没有顺序 不像文字 */
+            background: url(../img/pubg.webp) no-repeat center top;
+
+        }
+
+        /* 背景半透明 */
+        .semiTransparent {
+            background: rgba(0, 0, 0, .3);
+        }
+
+        .father {
+            color: lightblue;
+            /* font:12px/24px 'Microsoft YaHei'; */
+            font:12px/1.5 'Microsoft YaHei';
+        }
+
+        .son {
+            /* 行高为1.5 * 14px */
+            font-size: 14px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="external.css">
+</head>
+
+<body class="pubg">
+    <p>有点意思</p>
+    <p>有点意思</p>
+    <p>有点意思</p>
+    <p>有点意思</p>
+    <p>有点意思</p>
+    <div>第一个div</div>
+    <div class="hongse">第二个div</div>
+    <div>第三个div</div>
+    <ul>
+        <li class="hongse">ul小例</li>
+        <li>ul小例</li>
+        <li>ul小例</li>
+    </ul>
+    <ol>
+        <li>ul小例</li>
+        <li class="hongse">ul小例</li>
+        <li>ul小例</li>
+    </ol>
+    <div class="red box">红色盒子</div>
+    <div class="green box">绿色盒子</div>
+    <div class="red box">红色盒子</div>
+    <!-- 多类名 中间用空格隔开 -->
+    <div class="red font box">红色盒子</div>
+    <div id="first">红色盒子</div>
+
+    <h3>字体</h3>
+    <h4>咏鹅</h4>
+    <p>鹅鹅鹅，</p>
+    <p><em>曲项向天歌，</em></p>
+    <p class="bold">白毛浮绿水，</p>
+    <p class="text-attribute">红掌拨清波。</p>
+    <a href="https://www.nwafu.edu.cn/" class="text-attribute">没有下划线的网址链接</a>
+
+    <p style="color: deepskyblue;">行内样式表</p>
+    <p class="external">外部样式表</p>
+
+    <h3>Emmet语法 快速生成html css</h3>
+    <ol>
+        <li>标签名+tab</li>
+        <li>标签名*数量</li>
+        <li>>父子级标签 ul &gt; li</li>
+        <li>兄弟关系div + p</li>
+        <li>类或者id 如p . gray</li>
+        <li>. demo $ * 5 自动编号</li>
+        <li>div {文字} </li>
+    </ol>
+
+    <ul>
+        <li class="demo1"></li>
+        <li class="demo2"></li>
+        <li class="demo3"></li>
+        <li class="demo4"></li>
+        <li class="demo5"></li>
+    </ul>
+
+    <div>abcd</div>
+
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+
+    <h3>后代选择器</h3>
+
+    <ul>
+        <li>ul的li</li>
+        <li>ul的li</li>
+        <li>ul的li</li>
+        <li>ul的li</li>
+
+    </ul>
+
+    <ol>
+        <li>ol的li</li>
+        <li>ol的li</li>
+        <li>ol的li</li>
+        <li>ol的li</li>
+        <li>ol的li</li>
+        <li><a href="">孙子</a></li>
+    </ol>
+    <ol class="nav">
+        <li>ol的li</li>
+        <li>ol的li</li>
+        <li>ol的li</li>
+        <li>ol的li</li>
+        <li>ol的li</li>
+        <li><a href="">孙子</a></li>
+        <li><a href="">孙子</a></li>
+        <li><a href="">孙子</a></li>
+    </ol>
+
+    <h3>子选择器</h3>
+    <div class="subselecter">
+        <a href="#">son</a>
+        <p>
+            <a href="#">subsub</a>
+        </p>
+        <h4>并集选择器</h4>
+    </div>
+
+    <h3>伪类选择器</h3>
+    <a href="#" target="_blank">小猪佩奇</a>
+
+    <h3>focus伪类选择器</h3>
+    <input type="text" name="" id="">
+    <input type="text" name="" id="">
+    <input type="text" name="" id="">
+
+    <h3>元素显示模式 独占一行或一行多个</h3>
+    <ol>
+        <li>块元素：独占一行 相当于容器</li>
+        <li>行内元素：我的理解是 相当于格式刷</li>
+        <li>行内块元素 例如上面的三个input</li>
+    </ol>
+
+    <h3>元素显示模式转换</h3>
+    <a href="#" class="displayConver">显示模式转换</a>
+    <a href="#" class="displayConver">行内元素 但是独占一行</a>
+    <div class="displayConverForDiv">块级元素</div>
+    <div class="displayConverForDiv">块级元素</div>
+    <span class="displayConverForSpan">行内转行内块</span>
+    <span class="displayConverForSpan">行内转行内块</span>
+
+    <h3>背景</h3>
+    <div class="background">背景色</div>
+    <div class="backgroundImage"></div>
+    <h3 class="xinong">
+        西北农林科技大学
+    </h3>
+
+    <h3>CSS层叠性</h3>
+    对于两个相同的样式 就近原则 浏览器检查会有划线
+    <h3>继承性</h3>
+    子继承父的某些样式 
+    <div class="father">
+        <p class="son">子</p>
+        <ul>
+            <li>没有指定文字大小 行高为18px</li>
+        </ul>
+    </div>
+
+    <h3>优先级</h3>
+    影响范围越小的样式 权重越高 继承得到的样式权重为0 a链接默认指定了一个样式 复合选择器权重累加 但是不进位
+    <div class="father">
+        <a href="#">颜色没变化</a>
+    </div>
+
+    <Ul class="one">
+        <li>.one li 权重为 0010</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </Ul>
+
+
+</body>
+
+</html>

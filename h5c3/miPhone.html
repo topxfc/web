@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米手机</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 1200px;
+            /* 如果不设置高度 浏览器里检查 高度会变成0 */
+            /* height: 600px; */
+            background-color: rgb(177, 8, 67);
+        }
+
+        .left {
+            float: left;
+            width: 260px;
+            height: 600px;
+            background-color: lightcoral;
+
+        }
+
+        .right {
+            float: right;
+            width: 940px;
+            height: 600px;
+            background-color: rgb(164, 15, 48);
+            /* 额外标签法 */
+            clear: both;
+        }
+
+        .right>div {
+            width: 225px;
+            height: 295px;
+            background-color: lightgreen;
+            float: left;
+            margin-left: 10px;
+            /* 把外边距挤到父级元素外面 */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left"></div>
+        <div class="right">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+
+</html>

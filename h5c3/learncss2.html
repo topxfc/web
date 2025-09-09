@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learnCss2</title>
+    <style>
+        .borderDiv {
+            width: 300px;
+            height: 200px;
+            /* border-width: 5px;
+            border-style: solid;
+            border-color: lightblue; */
+            /* 复合写法没有顺序 */
+            /* 边框大小会影响盒子大小（以边框最外侧为依据） */
+            border-top: 5px solid lightblue;
+            border-bottom: 5px dashed red;
+        }
+
+        .tableSize {
+            width: 500px;
+            height: 250px;
+        }
+
+        .borderTable,
+        td,
+        th {
+            border: 5px solid rgb(121, 32, 32);
+            /* 合并边框 */
+            border-collapse: collapse;
+            /* 内边距 */
+            /* padding-left: 20px;
+            padding-top: 10px; */
+
+            /* 复合写法 上下左右5 上下5左右10 上5左右10 分别为上下左右 也会影响盒子实际大小*/
+            /* padding: 5px;
+            padding: 5px 10px;
+            padding: 5px 10px 20px; */
+            padding: 5px 10px 20px 30px;
+
+
+
+        }
+        .sina {
+            margin-top: 20px;
+            height: 41px;
+            border-top: 3px soild #ff8500;
+            background-color: #fcfcfc;
+            line-height: 41px;
+        }
+
+        .sina a{
+            /* margin-top: 20px; */
+            /* padding会撑开盒子 */
+            display: inline-block;
+            height: 41px;
+            padding: 0px 10px;
+            /* border: solid 2px; */
+            font-size: 12px;
+            color: #4c4c4c;
+            text-decoration: none;
+
+            
+        }
+        .sina a:hover {
+            background-color: #eee;
+            color: #ff8500;
+        }
+        /* padding不会影响盒子大小 */
+        .nodiv {
+            /* width: 100%; */
+            width: 300px;
+            height: 100px;
+            /* padding: 30px; */
+            background-color: #00ff84;
+        }
+        
+        .nodiv p {
+            width: 100%;
+            padding:30px;
+            background-color: #2200ff;
+        }
+
+        .marginOfDiv {
+            width: 600px;
+            height: 100px;
+            background-color: lightblue;
+            /* margin-bottom: 20px; */
+            /* 块级元素水平居中 1.盒子要有宽度 2.左右设置为auto*/
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-top: 20px;
+
+        /* 父元素塌陷解决方案 */
+            /* overflow: hidden; */
+            border: 1px solid transparent;
+            /* padding: 1px; */
+
+        }
+
+        /* .marginOfDiv span{
+
+        } */
+        .son {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            margin-top: 30px;
+        }
+
+        /* 垂直外边距合并 */
+        .one, .two {
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+        }
+        .one {
+            margin-bottom: 50px;
+        }
+        .two {
+            margin-bottom: 100px;
+        }
+/* 清除内外边距 行内元素尽量不要设置上下边距*/
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="borderDiv"></div>
+
+    <table class="borderTable tableSize">
+        <thead>
+            <tr>
+                <th>排名</th>
+                <th>校名</th>
+                <th>官网</th>
+                <th>分数线</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>北京大学</td>
+                <td> <a href="https://www.pku.edu.cn/" target="_blank">北京大学官网</a></td>
+                <td>699</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>清华大学</td>
+                <td> <a href="https://www.tsinghua.edu.cn/" target="_blank">清华大学官网</a></td>
+                <td>700</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="sina">
+        <a href="#">新浪导航</a>
+        <a href="#">手机新浪网</a>
+        <a href="#">移动客户端</a>
+        <a href="#">微博</a>
+    </div>
+
+
+    <div class="nodiv">
+        <p></p>
+    </div>
+
+    <h3>外边距 上下左右四个属性</h3>
+    <div class="marginOfDiv">1</div>
+    <div class="marginOfDiv">2</div>
+    <div class="marginOfDiv">
+        <span>行内元素或者行内块元素水平居中</span>
+    </div>
+    
+    <div class="marginOfDiv">
+        <div class="son"></div>
+    </div>
+
+    <div class="one"></div>
+    <div class="two"></div>
+
+    <div>
+        <li>默认内外边距</li>
+    </div>
+    
+
+</body>
+
+</html>

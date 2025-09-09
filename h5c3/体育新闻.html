@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开始学前端</title>
+</head>
+
+<body>
+    <h1 id="top">大三前的暑假，开始学习前端</h1>
+
+    <h2 id="suisuinian">起因经过结果</h2>
+    <p>webgis工程师，前端工程师，启动！
+    </p>
+    <p>虽然<ins>大一</ins>就从网上知道这个可以<strong>赚钱</strong>，但是因为不确定自己
+        是否喜欢，简单了解了一下就不了了之了，<U>大一到大二</U>，学了C++，python，opencv，linux等等技术
+        还有一些软件，最后暑期实习又玩了下<b>前端</b>，发现还是简单地去<em>排排版</em>适合我的性格，而且还能赚钱，
+        至于其它的，等<i>以后</i>读个相关的研<del>再说吧</del>，<s>未来可期！</s>
+    </p>
+
+    <h3>加粗strong 倾斜em 删除线del 下划线ins</h3>
+    <p>
+        语义化 HTML 的核心是​​让代码既能被人读懂，也能被机器理解​​，从而提升可访问性、SEO 和
+        维护效率。现代前端开发中，语义化已是基本要求，而非可选优化。你提到的 HTML 标签的简写形式（如 u>和 ins>）实际上是其​​完整英文单词的缩写​​，具体来源如下：
+
+        <br />1. ​​u标签​​<br />
+        ​​全称​​：underline（下划线）<br />
+        ​​背景​​：<br />
+        早期 HTML（如 HTML3.2）中，u是纯样式标签，直接表示“为文本添加下划线”。
+        后来因语义化规范（HTML5），它被重新定义为标记“非文本注释”（如专名号、拼写错误），但浏览器仍默认渲染为下划线。
+        <br />2. ​​ins标签​​<br />
+        ​​全称​​：inserted（插入的）<br />
+        ​​背景​​：<br />
+        属于语义化标签，表示文档中​​新增或插入的内容​​，与 del（deleted，删除的内容）对应。
+        默认样式为下划线，但核心用途是表达内容的编辑状态，而非视觉修饰。
+    </p>
+
+    <h3>盒子 没有语义 分割div占一行 跨距span</h3>
+    <div>独占一行 一个横向大盒子</div>另一行
+    <div>独占一行 一个横向大盒子</div>
+    <span>一行多个span</span> 不会另起一行
+
+    <h3>图像img单标签和路径</h3>
+    <h4>西农校徽</h4>
+    <img src='logo.png' /> 里面的src是<strong>属性</strong>
+    <h4>alt替换文本</h4>
+    <img src='log.png' alt='替换文本' />
+    <h4>title提示文本</h4>
+    <img src='logo.png' title='鼠标放上去会显示title' />
+    <h4>width设置宽度</h4>
+    <img src='logo.png' title='鼠标放上去会显示title' width="250" />
+    <h4>heigh设置高度</h4>
+    <img src='logo.png' title='鼠标放上去会显示title' width="250" height="50" />
+    <h4>只设置高度</h4>
+    <img src='logo.png' title='鼠标放上去会显示title' height="50" />
+    <h4>boder设置边框</h4>
+    一般不用图像的属性设置边框，用CSS
+    <img src='logo.png' title='鼠标放上去会显示title' height="50" border="15" />
+
+    <h3>目录</h3>
+    <p>目录文件夹第一层就叫根目录</p>
+    <p>相对路径：相对html文件的路径</p>
+    <p>同一级：直接文件名 下一级：用/符号 上一级：../</p>
+    <p>绝对路径：在电脑上的位置 或者网络上的位置</p>
+
+    <h3>超链接标签anchor href是目标地址 target链接网页的打开方式</h3>
+    <h4>1.外部链接 self默认值 当前窗口 blank新窗口</h4>
+    <a href="htth4s://www.baidu.com/" target="_blank">百度一下</a>
+    <a href="htth4s://www.qq.com/" target="_self">腾讯</a>
+    <h4>2.内部链接 网站内部之间的链接</h4>
+    <a href="sec.html" target="_blank">内部链接</a>
+    <h4>3.空链接 还没有做的链接 类似：已经新建文件夹？用#代替</h4>
+    <a href="#">空链接</a>
+    <h4>4.下载链接 .exe或者.zip文件</h4>
+    <a href="logo.zip">下载文件</a>
+    <h4>5.网页元素链接 图片 表格 音频 视频</h4>
+    <a href="https://www.nwafu.edu.cn/" target="_blank"><img src="logo.png" alt="西农校徽" title="点击跳转西农官网"></a>
+
+    <h3>锚点链接 类似latex里的/cite 快速定位到页面种的某个位置</h3>
+    <a href="#suisuinian">碎碎念</a>
+    第一步：添加id 第二步：创建链接
+    <a href="#top">返回顶部</a>
+
+    <h3>注释 特殊字符</h3>
+    <!-- fuck tx -->
+    <br>很多&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;空格
+    <br>大于号&lt;<br>小于号&gt;
+    <p> 为什么会有两种写法？​​
+        <br>​​历史原因​​：
+        <br>XHTML（基于 XML）严格要求标签闭合（如 &lt;br /&gt;、&lt;img /&gt;）。
+        <br>HTML5 为了兼容性和简化语法，允许两种写法，但推荐 &lt;br&gt;。
+        <br>​浏览器行为​​：所有浏览器均能正确解析 &lt;br&gt;和 &lt;br /&gt;，实际渲染效果无差别。</p>
+    <script>alert('fuck')</script>
+    <p>薛福春<br />2025/8/10</p>
+
+
+    
+</body>
+
+</html>
