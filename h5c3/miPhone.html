@@ -13,9 +13,17 @@
 
         .box {
             width: 1200px;
-            /* 如果不设置高度 浏览器里检查 高度会变成0 */
+            /* 如果不设置高度 浏览器里检查 高度会变成0 需要清除浮动*/
+            /* overflow: hidden; */
             /* height: 600px; */
             background-color: rgb(177, 8, 67);
+        }
+        .box1 {
+            width: 1200px;
+            /* 如果不设置高度 浏览器里检查 高度会变成0 需要清除浮动*/
+            /* overflow: hidden; */
+            height: 600px;
+            background-color: black;
         }
 
         .left {
@@ -31,10 +39,16 @@
             width: 940px;
             height: 600px;
             background-color: rgb(164, 15, 48);
-            /* 额外标签法 */
+            /* 额外标签法 会让right盒子跑到box下面*/
+            /* clear: both; */
+            /* 常见的网页布局top banner box footer */
+            /* 两个注意点：浮动元素要由标准流父元素约束 一浮全浮 浮动的盒子只会压住后面的标准流盒子 对前面的没影响*/
+            /* 前面的盒子独占一行 不让后面的浮动盒子跑到它的右边 */
+            /* 父盒子不方便给高度 因为孩子浮动后 父盒子高度会变成0 影响下面的标准流盒子 所以需要清除浮动 */
+        }
+        .clear{
             clear: both;
         }
-
         .right>div {
             width: 225px;
             height: 295px;
@@ -50,7 +64,7 @@
 <body>
     <div class="box">
         <div class="left"></div>
-        <div class="right">
+        <div class="right clear">
             <div></div>
             <div></div>
             <div></div>
@@ -60,6 +74,9 @@
             <div></div>
             <div></div>
         </div>
+    </div>
+    <div class="box1">
+        
     </div>
 </body>
 
