@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.w {
+    width: 1200px;
+    margin: auto;
+}
+
+.header {
+    background-color: skyblue;
+    height: 42px;
+    margin: 30px auto;
+}
+
+.logo {
+    float: left;
+    width: 198px;
+    height: 42px;
+    background-color: blue;
+}
+
+.nav {
+    margin-left: 60px;
+}
+
+.nav ul li {
+    float: left;
+    list-style: none;
+}

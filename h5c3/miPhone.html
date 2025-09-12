@@ -18,6 +18,7 @@
             /* height: 600px; */
             background-color: rgb(177, 8, 67);
         }
+
         .box1 {
             width: 1200px;
             /* 如果不设置高度 浏览器里检查 高度会变成0 需要清除浮动*/
@@ -41,14 +42,17 @@
             background-color: rgb(164, 15, 48);
             /* 额外标签法 会让right盒子跑到box下面*/
             /* clear: both; */
+            /* clear 属性通过控制元素的浮动清除行为来解决浮动问题。具体来说，clear 会告诉浏览器：“不要让这个元素与前面的浮动元素重叠，确保它位于浮动元素之后并且不受浮动影响。” */
             /* 常见的网页布局top banner box footer */
             /* 两个注意点：浮动元素要由标准流父元素约束 一浮全浮 浮动的盒子只会压住后面的标准流盒子 对前面的没影响*/
-            /* 前面的盒子独占一行 不让后面的浮动盒子跑到它的右边 */
+            /* 前面的盒子独占一行 不会让后面的浮动盒子跑到它的右边 */
             /* 父盒子不方便给高度 因为孩子浮动后 父盒子高度会变成0 影响下面的标准流盒子 所以需要清除浮动 */
         }
-        .clear{
+
+        .clear {
             clear: both;
         }
+
         .right>div {
             width: 225px;
             height: 295px;
@@ -58,13 +62,35 @@
             /* 把外边距挤到父级元素外面 */
             margin-bottom: 10px;
         }
+        /* 伪元素清除浮动 */
+        /* .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        } */
+
+        /* 双伪元素 清除浮动 */
+        .clearfix:before,
+        .clearfix:after {
+            display: table;
+            content: '';
+
+        }
+        .clearfix:after {
+            clear: both;
+        }
+        .clearfix {
+            *zoom: 1;
+        }
     </style>
 </head>
 
 <body>
-    <div class="box">
+    <div class="box clearfix">
         <div class="left"></div>
-        <div class="right clear">
+        <div class="right">
             <div></div>
             <div></div>
             <div></div>
@@ -76,7 +102,7 @@
         </div>
     </div>
     <div class="box1">
-        
+
     </div>
 </body>
 

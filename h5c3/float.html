@@ -63,6 +63,17 @@
             height: 460px;
             background-color: lightcyan;
         }
+        /* 伪元素清除浮动 */
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear:both;
+            visibility: hidden;
+        }
+        .clearfix{
+            *zoom: 1;
+        }
     </style>
 </head>
 
