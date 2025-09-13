@@ -3,15 +3,25 @@
     padding: 0;
 }
 
-
+body {
+    background-color: #f5f6f7;
+}
 
 .w {
     width: 1200px;
     margin: auto;
 }
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 .header {
-    background-color: skyblue;
+    /* background-color: pink; */
     height: 42px;
     margin: 30px auto;
 }
@@ -20,14 +30,178 @@
     float: left;
     width: 198px;
     height: 42px;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .nav {
+    float: left;
     margin-left: 60px;
 }
 
 .nav ul li {
+    /* list-style: none; */
     float: left;
-    list-style: none;
+    margin: 0 10px;
+}
+
+.nav ul li a {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    /* margin: 0 10px; */
+    padding: 0 10px;
+    color: black;
+    font-size: 18px;
+}
+
+.nav ul li a:hover {
+    /* text-decoration: underline; */
+    border-bottom: 2px blue solid;
+    color: blue;
+}
+
+.search {
+    float: left;
+    height: 42px;
+    width: 403px;
+    background-color: skyblue;
+    margin-left: 70px;
+}
+
+.search input {
+    float: left;
+    width: 345px;
+    height: 40px;
+    border: 1px solid blue;
+    border-right: none;
+    padding-left: 15px;
+    color: #bfbfbf;
+    font-size: 14px;
+}
+
+/* boder的宽度向外延伸 */
+
+/* .search button {
+    float: left;
+    height: 42px;
+    width: 51px;
+}
+
+.search button img {
+    height: 42px;
+} */
+
+.search button {
+    float: left;
+    height: 42px;
+    width: 42px;
+    /* background-color: skyblue; */
+    border: none;
+    background: url(images/搜索2.png);
+    background-repeat: no-repeat;
+    /* background-size: 42px; */
+    background-position: center;
+
+}
+
+.user {
+    float: right;
+    height: 42px;
+    margin-right: 50px;
+    line-height: 42px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* banner */
+.banner {
+    height: 421px;
+    background-color: #1c036c;
+}
+
+.banner .w {
+    height: 421px;
+    /* background-color: skyblue; */
+    background: url(images/banner.jpg) no-repeat top center;
+}
+
+.subnav {
+    float: left;
+    width: 190px;
+    height: 412px;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.subnav ul li {
+    /* height: 45px;
+    line-height: 45px; */
+    padding: 0 20px;
+}
+
+.subnav ul li a {
+    display: block;
+    /* padding-left: 12px; */
+    color: #fff;
+    height: 45px;
+    line-height: 45px;
+}
+
+.subnav ul li a span {
+    float: right;
+}
+
+.subnav ul li a:hover {
+    color: skyblue;
+}
+
+.course {
+    float: right;
+    width: 230px;
+    height: 300px;
+    margin: 50px;
+    background-color: #fff;
+    /* background-color: skyblue; */
+}
+
+.course h2 {
+    height: 48px;
+    background-color: skyblue;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.course .bd {
+    padding: 0 20px;
+}
+
+.course .bd ul li{
+    padding: 14px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.course .bd ul li h4 {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+
+.course .bd ul li p {
+    font-size: 12px;
+    columns: #a5a5a5;
+}  
+
+.course .bd a{
+    display: block;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    margin-top: 5px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.goods {
+    
 }
