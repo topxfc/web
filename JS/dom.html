@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="time">2025/9/15</div>
+    <script>
+        // 从上往下加载 要写到标签下面
+        var timer = document.getElementById('time')
+        console.log(timer);
+        console.log(typeof timer);
+        console.dir(timer);        
+    </script>
+
+    <ul>
+        <li>云程发轫，未来可期</li>
+        <li>云程发轫，未来可期</li>
+        <li>云程发轫，未来可期</li>
+        <li>云程发轫，未来可期</li>
+    </ul>
+    <ol>
+        <li>知否知否</li>
+        <li>知否知否</li>
+        <li>知否知否</li>
+        <li>知否知否</li>
+    </ol>
+
+    <script>
+        // 对象集合 伪数组
+        var lis = document.getElementsByTagName('li')
+        console.log(lis);
+        for (let i = 0; i < lis.length; i++) {
+            const lie = lis[i];
+            console.log(lie);
+            
+        }
+
+        var ol = document.getElementsByTagName('ol')
+        console.log(ol[0].getElementsByTagName('li'));
+        
+    </script>
+
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <div id="nav">盒子3</div>
+    <script>
+        var box = document.getElementsByClassName('box');
+        console.log(box);
+
+        // 返回第一个 .类 #id
+        var firstBox = document.querySelector('.box');
+        console.log(firstBox);
+
+        // 返回所有元素 和 getElementsByClassName()有区别 返回的是静态的快照
+        var allBox = document.querySelectorAll('.box')
+        console.log(allBox);
+        
+        var a = document.body
+        var a = document.html
+        var a = document.documentElement
+        
+
+    </script>
+
+
+    
+
+
+
+</body>
+</html>

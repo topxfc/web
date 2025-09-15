@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="tit"></div>
+    <script>
+        var tit = document.getElementById('tit')
+        tit.innerHTML = '事ab  c<br>件d cf'
+        console.log(tit.innerHTML);
+        console.log(tit.innerText);
+
+
+    </script>
+
+
+    <button id="btn">事件的三部分</button>
+    <script>
+        var btn = document.getElementById('btn')
+        btn.onclick = function () {
+            alert('事件源 事件类型 事件处理程序')
+        }
+    </script>
+    <div>点我</div>
+    <script>
+        var div = document.querySelector('div')
+        div.onclick = function () {
+            console.log('修改了时间');
+
+        }
+    </script>
+    <button id="gtm">获取时间</button>
+    <button id="gtm1">获取时间(加粗)</button>
+    <div class="tim">时间</div>
+    <script>
+        var btn1 = document.getElementById('gtm');
+        btn1.onclick = function () {
+            document.getElementsByClassName('tim')[0].innerText = '2025-9-15'
+        }
+        var btn1 = document.getElementById('gtm1');
+        btn1.onclick = function () {
+            document.getElementsByClassName('tim')[0].innerHTML = '<strong>2025-9-15</strong>'
+        }
+
+    </script>
+
+    <button id="lib">图书馆</button>
+    <button id="yang">杨小姐</button> <br>
+    <img src="../img/yang.webp" alt="" id="tut" tut.title = '天元鼎'>
+
+    <script>
+        var lib = document.getElementById('lib');
+        var yang = document.getElementById('yang');
+        var tut = document.getElementById('tut');
+
+        lib.onclick = function () {
+            tut.src = '../img/WHUsex.webp';
+            tut.title = '樱花大学保研丹';
+        }
+
+        yang.onclick = function() {
+            tut.src = "../img/yang.webp";
+            tut.title = '天元鼎';
+        }
+    </script>
+
+    <h2 id = 'timse'>早上好，一日之计在于晨</h2>
+    <script>
+        var date = new Date();
+        var h = date.getHours();
+        var timse = document.getElementById('timse')
+        if (h < 12) {
+            timse.innerText = '早上好，一日之计在于晨！'
+        }else if(h < 18) {
+            timse.innerText = '下午好，蹄疾步稳终致远！'
+        }else {
+            timse.innerText = '晚上好，早睡早起，准备迎接明天！'
+        }
+    </script>
+</body>
+
+</html>
