@@ -127,6 +127,10 @@
             padding: 0;
             margin: 0;
         }
+        .bg {
+
+            background-color: skyblue;
+        }
     </style>
 </head>
 
@@ -157,6 +161,20 @@
             </tr>
         </tbody>
     </table>
+
+    <script>
+        var trs = document.querySelector('tbody').querySelectorAll('tr');
+        for (let i = 0; i < trs.length; i++) {
+            const tr = trs[i];
+            tr.onmouseover = function(){
+                this.className = 'bg';
+            }
+            tr.onmouseout = function(){
+                this.className = '';
+            }
+            
+        }
+    </script>
 
     <div class="sina">
         <a href="#">新浪导航</a>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .baidu {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button>按钮1</button><button>按钮2</button><button>按钮3</button><button>按钮4</button><button>按钮5</button>
+    <script>
+        var btn = document.getElementsByTagName('button');
+        for (let i = 0; i < btn.length; i++) {
+            const element = btn[i];
+            element.onclick = function () {
+                for (let j = 0; j < btn.length; j++) {
+                    const e1 = btn[j];
+                    e1.style.backgroundColor = '';
+                    this.style.backgroundColor = 'pink';
+
+                }
+            }
+
+        }
+        // 排他思想
+
+    </script>
+    <ul class="baidu">
+        <li><img src="../img/24gf-bubbleDots4.png" alt=""></li>
+        <li><img src="../img/24gf-bubbleDots41.png" alt=""></li>
+        <li><img src="../img/24gf-bubbleDots42.png" alt=""></li>
+        <li><img src="../img/24gf-bubbleDots43.png" alt=""></li>
+        <li><img src="../img/24gf-bubbleDots44.png" alt=""></li>
+    </ul>
+    <img src="" alt="" class="bai">
+    <script>
+        var imgs = document.querySelector('.baidu').querySelectorAll('img')
+        for (let i = 0; i < imgs.length; i++) {
+            const img = imgs[i];
+            img.onclick = function () {
+                document.querySelector('.bai').src = this.src;
+
+            }
+
+        }
+    </script>
+    <div class="form-group">
+        <label>您希望通过哪些方式接收我们的回复？（可多选）</label>
+        <div id="qx">
+            <input type="checkbox" id="select-all">
+            <label for="select-all" style="display: inline;">全选</label>
+
+            <div id="qx1">
+                <input type="checkbox" name="reply-method" value="email">
+                <label for="email-reply" style="display: inline;">电子邮件</label>
+
+                <input type="checkbox"  name="reply-method" value="sms">
+                <label for="sms-reply" style="display: inline;">短信</label>
+
+                <input type="checkbox" name="reply-method" value="phone">
+                <label for="phone-reply" style="display: inline;">电话</label>
+
+                <input type="checkbox" name="reply-method" value="wechat">
+                <label for="wechat-reply" style="display: inline;">微信</label>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit">提交表单</button>
+    </form>
+
+    <script>
+        var j_caAll = document.getElementById('select-all');
+        var j_tbs = document.getElementById('qx1').getElementsByTagName('input');
+        // console.log(j_tbs);
+
+        j_caAll.onclick = function () {
+            for (let i = 0; i < j_tbs.length; i++) {
+                const j_tb = j_tbs[i];
+                j_tb.checked = this.checked;
+
+            }
+        }
+
+        for (let index = 0; index < j_tbs.length; index++) {
+            const j_tb = j_tbs[index];
+            j_tb.onclick = function () {
+                var flag = true;
+                // 由于没有再设置一个选中时的判断分支，所以flag要初始化在事件里面
+
+                for (let j = 0; j < j_tbs.length; j++) {
+                    const j_tb1 = j_tbs[j];
+                    if (!j_tb1.checked) {
+                        flag = false;
+                        break;
+                    }
+
+                }
+                j_caAll.checked = flag;
+
+            }
+        }
+
+    </script>
+
+    <div data-list-index="1" id = 'aaa'></div>
+
+    <script>
+        var d = document.getElementById('aaa');
+        console.log(d.dataset.listIndex);
+        d.setAttribute('data-list-index','666')
+        console.log(d.dataset.listIndex);
+        
+    </script>
+
+
+
+
+</body>
+
+</html>
