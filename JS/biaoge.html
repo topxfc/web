@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态表格</title>
+    <style>
+        table {
+            width: 500px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td,
+        th {
+            border: 1px solid #333;
+        }
+
+        thead tr {
+            height: 40px;
+            background-color: #ccc;
+        }
+
+        textarea {
+            /* margin: 100px auto; */
+            width: 400px;
+            height: 100px;
+            background-color: #ccc;
+            resize: none;
+        }
+
+        li {
+            width: 300px;
+        }
+
+        li a {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellspacing='0'>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        var datas = [{
+
+            "name": "魏璎珞",
+
+            "subject": "python",
+
+            "score": 100
+
+        },
+
+        {
+
+            "name": "富察傅恒",
+
+            "subject": "java",
+
+            "score": 95
+
+        },
+
+        {
+
+            "name": "乾隆",
+
+            "subject": "javascript",
+
+            "score": 88
+
+        },
+
+        {
+
+            "name": "高贵妃",
+
+            "subject": "c++",
+
+            "score": 92
+
+        },
+
+        {
+
+            "name": "娴妃",
+
+            "subject": "python",
+
+            "score": 97
+
+        },
+
+        {
+
+            "name": "明玉",
+
+            "subject": "html",
+
+            "score": 85
+
+        }
+        ];
+
+        var tbody = document.querySelector('tbody');
+        for (let i = 0; i < datas.length; i++) {
+            var tr = document.createElement('tr');
+            tbody.appendChild(tr);
+            var data = datas[i];
+            for (k in data) {
+                var td = document.createElement('td');
+                td.innerHTML = data[k]
+                tr.appendChild(td);
+            }
+
+            var td = document.createElement('td');
+            td.innerHTML = '<a href = "javascript:;">删除</a>';
+            tr.appendChild(td);
+
+        }
+        var as = document.querySelectorAll('a');
+        for (let i = 0; i < as.length; i++) {
+            const a = as[i];
+            a.onclick = function () {
+                tbody.removeChild(this.parentNode.parentNode)
+            }
+
+        }
+    </script>
+
+    <textarea name="" id=""></textarea>
+    <button>发布</button>
+    <ul>
+
+    </ul>
+    <script>
+        var btn = document.querySelector('button');
+        var comments = document.querySelector('ul');
+        var text = document.querySelector('textarea');
+        // 使用事件委托处理删除操作（只需绑定一次）
+        comments.addEventListener('click', function (e) {
+            if (e.target.classList.contains('delet')) {
+                e.target.parentNode.remove(); // 直接删除父元素（li）
+            }
+        });
+        btn.onclick = function () {
+            if (text.value == '') {
+                alert('请输入内容')
+            } else {
+                var comment = document.createElement("li");
+                comment.innerHTML = text.value + '<a href = "javascript:;" class = "delet">删除</a>';
+                // comments.appendChild(comment);
+                comments.insertBefore(comment, comments.children[0]);
+                text.value = '';
+                text.focus();
+            }
+            // var delets = document.querySelectorAll('.delet');
+            // for (let i = 0; i < delets.length; i++) {
+            //     const delet = delets[i];
+            //     delet.onclick = function () {
+            //         delet.parentNode.parentNode.removeChild(this.parentNode);
+            //     }
+            // }
+
+        }
+
+    </script>
+</body>
+
+</html>
