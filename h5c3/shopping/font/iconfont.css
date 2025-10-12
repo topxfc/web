@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1760276452293') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrows-copy-copy:before {
+  content: "\e601";
+}
+
+.icon-jiantouxia:before {
+  content: "\e62d";
+}
+
+.icon-jiantou:before {
+  content: "\e636";
+}
+
+.icon-layui-extend-tuya_huabanfuben:before {
+  content: "\e503";
+}
+
