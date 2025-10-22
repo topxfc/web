@@ -1,4 +1,4 @@
-body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dt,dd{
+*{
     /* 默认有边距，都要清除 */
     margin: 0;
     padding: 0;
@@ -28,6 +28,11 @@ input,img{
     border: 0 none;
     outline-style: none;
     vertical-align: bottom; 
+}
+
+button{
+    border: 0 none;
+    outline: none;
 }
  
 /*行内元素*/

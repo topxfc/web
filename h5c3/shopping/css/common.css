@@ -52,6 +52,49 @@
 }
 
 .header {
+    position: relative;
     height: 105px;
     background-color: skyblue;
 }
+
+.logo {
+    position: absolute;
+    top: 36px;
+    left: 36px;
+    height: 32px;
+    width: 32px;
+    /* background-color: #666; */
+}
+
+.logo a{
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url(../images/购物.png) no-repeat center center;
+    font-size: 0;
+}
+
+.search {
+    position: absolute;
+    top: 25px;
+    left: 346px;
+    width: 538px;
+    height: 36px;
+    border: 2px solid #c81623 ;
+}
+
+.search input{
+    float: left;
+    width: 454px;
+    height: 32px;
+    padding-left: 10px;
+}
+
+.search button{
+    float: right;
+    width: 80px;
+    height: 32px;
+    background-color: #c81623;
+    color: white;
+}
+
