@@ -34,16 +34,16 @@
 }
 
 @font-face {
-  font-family: 'iconfont';
-  src: url('../font/iconfont.ttf') format('truetype');
+    font-family: 'iconfont';
+    src: url('../font/iconfont.ttf') format('truetype');
 }
 
 .iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .iconfont::after {
@@ -54,7 +54,7 @@
 .header {
     position: relative;
     height: 105px;
-    background-color: skyblue;
+    background-color: pink;
 }
 
 .logo {
@@ -66,7 +66,7 @@
     /* background-color: #666; */
 }
 
-.logo a{
+.logo a {
     display: block;
     width: 32px;
     height: 32px;
@@ -80,17 +80,17 @@
     left: 346px;
     width: 538px;
     height: 36px;
-    border: 2px solid #c81623 ;
+    border: 2px solid #c81623;
 }
 
-.search input{
+.search input {
     float: left;
     width: 454px;
     height: 32px;
     padding-left: 10px;
 }
 
-.search button{
+.search button {
     float: right;
     width: 80px;
     height: 32px;
@@ -98,3 +98,106 @@
     color: white;
 }
 
+.hotwords {
+    position: absolute;
+    top: 66px;
+    left: 346px;
+
+}
+
+.hotwords a {
+    margin: 0 10px;
+}
+
+.shopcar {
+    position: absolute;
+    top: 25px;
+    right: 60px;
+    width: 140px;
+    height: 35px;
+    border: 1px solid #dfdfdf;
+    background-color: #f7f7f7;
+    line-height: 35px;
+
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.shopcar::before {
+    content: '󰅹';
+    margin-right: 5px;
+    color: #b1191b;
+}
+
+.shopcar::after {
+    content: '';
+    margin-left: 10px;
+}
+
+.count {
+    position: absolute;
+    top:-5px;
+    left: 105px;
+    height: 14px;
+    line-height: 14px;
+    color: #fff;
+    background-color: #e60012;
+    padding: 0 5px;
+    border-radius: 7px 7px 7px 0px;
+}
+
+.nav {
+    height: 47px;
+    border-bottom: 2px solid #b1191a;
+
+}
+
+.nav .dropdown {
+    float: left;
+    height: 45px;
+    width: 210px;
+    background-color: #b1191a;
+}
+
+.nav .navitems {
+    float: left;
+}
+
+.dropdown .dt{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    font-size: 16px;
+}
+
+.dropdown .dd {
+    width: 210px;
+    height: 465px;
+    background-color: #c81623;
+}
+
+.dropdown .dd ul li {
+    height: 31px;
+    line-height: 31px;
+    margin-left: 2px;
+    padding-left: 10px;
+}
+
+.dropdown .dd ul li:hover {
+    background-color: #fff;
+}
+
+.dropdown .dd ul li a {
+    font-size: 14px;
+    color: #fff;
+}
+
+.dropdown .dd ul li:hover a{
+    color: #c81623;
+}

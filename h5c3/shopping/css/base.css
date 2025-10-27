@@ -36,15 +36,22 @@ button{
 }
  
 /*行内元素*/
-a,a:active,a:visited{
+/* a,a:active,a:visited{
+    text-decoration: none;
+    color: #ccc;
+} */
+
+/* 权重问题 a要单独写出 不知道为什么 */
+
+a {
     /*下划线和颜色*/
     text-decoration: none;
     color: #ccc;
 }
- 
-a:hover{
+
+/* a:hover{
     color:#333;
-}
+} */
  
 textarea{
     /* 边框清零 */
