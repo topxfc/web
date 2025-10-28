@@ -46,12 +46,12 @@ button{
 a {
     /*下划线和颜色*/
     text-decoration: none;
-    color: #ccc;
+    color: #666;
 }
 
-/* a:hover{
+a:hover{
     color:#333;
-} */
+}
  
 textarea{
     /* 边框清零 */
