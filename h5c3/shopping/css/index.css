@@ -1,14 +1,198 @@
 .main{
+    margin-top: 10px;
     width: 980px;
     height: 455px;
-    background-color: skyblue;
+    /* background-color: skyblue; */
     margin-left: 220px;
 }
 
 .focus {
+    position: relative;
     float: left;
     width: 721px;
     height: 455px;
+    background-color: pink;
+    overflow: hidden;
+}
+
+.focus ul li img{
+    position: absolute;
+    right: 0px;
+    height: 455px;
+}
+
+.newsflash {
+    float: right;
+    width: 250px;
+    height: 455px;
+    /* background-color: purple; */
+}
+
+.news {
+    height: 165px;
+    /* background-color: pink; */
+    border: 1px solid #e4e4e4;
+}
+
+.news-hd {
+    height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+    padding: 0 15px;
+}
+
+.news-hd h5 {
+    float: left;
+    line-height: 33px;
+    font-size: 14px;
+}
+
+.news-hd .more {
+    float: right;
+    line-height: 33px;
+
+}
+
+.news-hd .more::after {
+    content: '\e61f';
+
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+.news-bd {
+    padding: 5px 15px 0;
+}
+.news-bd ul li{
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.lifeservice {
+    height: 209px;
+    /* background-color: papayawhip; */
+    border: 1px solid #e4e4e4;
+    overflow: hidden;
+}
+
+.lifeservice ul {
+    width: 252px;
+}
+
+.lifeservice ul li {
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+.lifeservice ul li i {
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    background-color: pink;
+    margin-top: 12px;
+    background: url(../images/jllt.png) no-repeat -19px -15px;
+}
+
+.bargain {
+    position: relative;
+    height: 81px;
+    margin-top: 5px;
+    /* background-color: purple; */
+    overflow: hidden;
+}
+
+.bargain img {
+    position: absolute;
+    top: -12px;
+}
+
+.recom {
+    height: 163px;
+    background-color: white;
+    margin-top: 12px;
+}
+
+.recom-hd{
+    float: left;
+    width: 205px;
+    height: 100%;
+    background-color: #e4e4e4;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.recom-bd{
+    float: left;    
+}
+
+.recom-bd ul li {
+    position: relative;
+    float: left;
+    display: block;
+    height: 163px;
+    width: 248px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.recom-bd ul li img {
+    height: 100%;
+}
+
+.recom-bd ul li:nth-child(-n+3)::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    width: 1px;
+    height: 145px;
+    background-color: #ddd;
+}
+
+/* 家用电器 */
+.box_hd {
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+}
+
+.box_hd h3 {
+    float: left;
+    font-size: 18px;
+    color: #c81623;
+    font-weight: 400;
+}
+
+.tab-list {
+    float: right;
+    line-height: 30px;
+}
+
+.box_hd ul li {
+    float: left;
+    color: #ccc;
+}
+
+.box_hd ul li a {
+    margin: 0 15px;
+}
+
+.floor .w {
+    margin-top: 30px;
+}
+
+.box_bd {
+    height: 361px;
     background-color: pink;
 }
 
